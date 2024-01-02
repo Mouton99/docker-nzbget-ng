@@ -3,9 +3,9 @@
 
 ## Important!
 
-This is a fork of linuxserver's docker-nzbget that will create a working Docker image from github.com/nzbget-ng/nzbget
+This is a fork of linuxserver's docker-nzbget that will create a working Docker image from [github.com/nzbget-ng/nzbget](https://github.com/nzbget-ng/nzbget).
 
-See https://hub.docker.com/r/mouton99/nzbget-ng for ready-to-use images (linux/amd64 only), or checkout this repo and build your own image with it.
+See https://hub.docker.com/r/mouton99/nzbget-ng for ready-to-use images (for `linux/amd64` only), or checkout this repo and build your own image with it (for ARM servers).
 
 Original README below.
 
@@ -58,24 +58,26 @@ Find us at:
 
 We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
 
-Simply pulling `lscr.io/linuxserver/nzbget:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
+~~Simply pulling `lscr.io/linuxserver/nzbget:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.~~
+
+Simply pull `mouton99/nzbget-ng`. **Only amd64 (x86-64) is available on Dockerhub.** You will need to compile the image yourself for ARM servers.
 
 The architectures supported by this image are:
 
 | Architecture | Available | Tag |
 | :----: | :----: | ---- |
-| x86-64 | ✅ | amd64-\<version tag\> |
-| arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf| ✅ | arm32v7-\<version tag\> |
+| x86-64 | ✅ | ~~amd64-\<version tag\>~~ |
+| arm64 | ❌ | ~~arm64v8-\<version tag\>~~ |
+| armhf| ❌ | ~~arm32v7-\<version tag\>~~ |
 
 ## Version Tags
 
-This image provides various versions that are available via tags. Please read the descriptions carefully and exercise caution when using unstable or development tags.
+~~This image provides various versions that are available via tags. Please read the descriptions carefully and exercise caution when using unstable or development tags.~~
 
 | Tag | Available | Description |
 | :----: | :----: |--- |
 | latest | ✅ | Stable nzbget releases |
-| testing | ✅ | nzbget pre-releases |
+| testing | ❌ | nzbget pre-releases |
 
 ## Application Setup
 
