@@ -20,7 +20,6 @@ RUN \
   git clone https://github.com/nzbget-ng/nzbget.git nzbget && \
   cd nzbget/ && \
   git checkout develop && \
-  git cherry-pick -n fa57474d && \
   make && \
   ./configure \
     bindir='${exec_prefix}' && \
