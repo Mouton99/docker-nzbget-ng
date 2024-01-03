@@ -20,7 +20,8 @@ RUN \
   git clone https://github.com/nzbget-ng/nzbget.git nzbget && \
   cd nzbget/ && \
   git checkout develop && \
-  make && \
+  sed -i -e 's/ nzbget,/nzbget,/' configure.ac && \
+  make -j && \
   ./configure \
     bindir='${exec_prefix}' && \
   make -j && \
